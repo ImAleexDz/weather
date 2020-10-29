@@ -22,7 +22,7 @@ function App() {
     const consultarApi = async () => {
       if(consultar) {
         const appid = '8cdc7103aae645083664b78c69b65ec0';
-        const URL = `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appid}`
+        const URL = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appid}`
 
         const respuesta = await fetch(URL);
         const resultado = await respuesta.json()
@@ -40,6 +40,7 @@ function App() {
       
     }
     consultarApi();
+    // eslint-disable-next-line
   }, [consultar]);
 
   //Carga condicional de componentes
