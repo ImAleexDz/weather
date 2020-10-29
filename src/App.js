@@ -26,7 +26,6 @@ function App() {
 
         const respuesta = await fetch(URL);
         const resultado = await respuesta.json()
-
         setResultado(resultado);
         setConsultar(false);
 
